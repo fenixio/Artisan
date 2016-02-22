@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9783689C-130C-485B-AE40-02E5FE77EF8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Artisan.Tools.CacheManager</RootNamespace>
+    <AssemblyName>Artisan.Tools.CacheManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SlnAssemblyInfo.cs">
+      <Link>Properties\SlnAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Cache.cs" />
+    <Compile Include="Exceptions\CacheException.cs" />
+    <Compile Include="CacheItem.cs" />
+    <Compile Include="Exceptions\CacheNotEmptyException.cs" />
+    <Compile Include="Expiration\AbsoluteExpirationPolicy.cs" />
+    <Compile Include="Expiration\ExpirationPolicyBase.cs" />
+    <Compile Include="Expiration\ScheduledExpirationPolicy.cs" />
+    <Compile Include="Expiration\SlidingExpirationPolicy.cs" />
+    <Compile Include="IExpirationPolicy.cs" />
+    <Compile Include="InvalidationMode.cs" />
+    <Compile Include="IPurgePolicy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purge\LFUPurgePolicy.cs" />
+    <Compile Include="Purge\LRUPurgePolicy.cs" />
+    <Compile Include="Purge\PurgePolicyBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logger\Artisan.Tools.Logger.csproj">
+      <Project>{baae7df4-a91d-4c34-af36-b01db9a92e97}</Project>
+      <Name>Artisan.Tools.Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Artisan.Tools.Exceptions.csproj">
+      <Project>{f3ed718b-582b-4971-b453-b113430b6bc8}</Project>
+      <Name>Artisan.Tools.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
