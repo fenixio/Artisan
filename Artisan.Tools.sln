@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artisan.Tools.Store", "Keep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToTerraServerProvider", "LinqToTerraServerProvider\LinqToTerraServerProvider.csproj", "{62ABB18C-EDE5-4C30-B3DF-E6AB269F4821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artisan.Tools.Configurator", "Configuration\Artisan.Tools.Configurator.csproj", "{75A0B42B-35B1-4A7A-82D1-2D9CF98A6BFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artisan.Tools.Configurator", "Configurator\Artisan.Tools.Configurator.csproj", "{75A0B42B-35B1-4A7A-82D1-2D9CF98A6BFD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artisan.Tools.Reflector", "Reflector\Artisan.Tools.Reflector.csproj", "{7719E1C3-DBA0-4AB3-BC12-363424C89E7E}"
 EndProject
