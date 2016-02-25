@@ -51,6 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Copier.cs" />
+    <Compile Include="IQueryConstraints.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="PagedResult.cs" />
+    <Compile Include="QueryContraints.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="StorableObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreSet.cs" />
@@ -58,6 +63,16 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exceptions\Artisan.Tools.Exceptions.csproj">
+      <Project>{f3ed718b-582b-4971-b453-b113430b6bc8}</Project>
+      <Name>Artisan.Tools.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Artisan.Tools.Logger.csproj">
+      <Project>{baae7df4-a91d-4c34-af36-b01db9a92e97}</Project>
+      <Name>Artisan.Tools.Logger</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
